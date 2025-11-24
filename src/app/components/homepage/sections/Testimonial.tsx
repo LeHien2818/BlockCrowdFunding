@@ -40,7 +40,7 @@ export function HpTestimonials() {
         <h2 className="text-3xl lg:text-4xl text-white font-bold bg-clip-text bg-gradient-to-r from-primary-500 to-primary-400 mb-4">
           What people are saying
         </h2>
-        <p className="text-yellow-400 text-lg mb-16">
+        <p className="text-purple-400 text-lg mb-16">
           Hear from our early community members
         </p>
 
@@ -62,7 +62,7 @@ export function HpTestimonials() {
                 </div>
               </div>
               <p className="text-gray-400">"{testimonial.content}"</p>
-              <div className="flex justify-center gap-5 mt-4 text-yellow-400">
+              <div className="flex justify-center gap-5 mt-4 text-purple-400">
                 {Array.from({ length: testimonial.stars }).map((_, i) => (
                   <Star key={i} size={20} fill="currentColor" />
                 ))}

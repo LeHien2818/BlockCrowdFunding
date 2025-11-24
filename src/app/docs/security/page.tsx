@@ -5,11 +5,11 @@ import { ArrowLeft, Shield, Lock, AlertTriangle, CheckCircle2 } from "lucide-rea
 import { useRouter } from "next/navigation"
 
 const overviewFeatures = [
-  { icon: <Shield className="w-5 h-5 text-yellow-400" />, text: "Kiểm toán smart contracts" },
-  { icon: <Lock className="w-5 h-5 text-yellow-400" />, text: "Xác thực đa yếu tố" },
-  { icon: <Shield className="w-5 h-5 text-yellow-400" />, text: "Mã hóa đầu cuối" },
-  { icon: <Shield className="w-5 h-5 text-yellow-400" />, text: "Giám sát giao dịch 24/7" },
-  { icon: <Shield className="w-5 h-5 text-yellow-400" />, text: "Bảo vệ chống tấn công DDoS" },
+  { icon: <Shield className="w-5 h-5 text-purple-400" />, text: "Kiểm toán smart contracts" },
+  { icon: <Lock className="w-5 h-5 text-purple-400" />, text: "Xác thực đa yếu tố" },
+  { icon: <Shield className="w-5 h-5 text-purple-400" />, text: "Mã hóa đầu cuối" },
+  { icon: <Shield className="w-5 h-5 text-purple-400" />, text: "Giám sát giao dịch 24/7" },
+  { icon: <Shield className="w-5 h-5 text-purple-400" />, text: "Bảo vệ chống tấn công DDoS" },
 ]
 
 const accountSteps = [
@@ -49,7 +49,7 @@ export default function SecurityPage() {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Quay lại
         </Button>
-        <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           Bảo Mật
         </h1>
         <p className="text-lg text-gray-300 mb-10">
@@ -58,12 +58,12 @@ export default function SecurityPage() {
 
         {/* Tổng quan về bảo mật */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-400 flex items-center gap-2">
-            <Shield className="w-6 h-6 text-yellow-400" /> Tổng quan về bảo mật
+          <h2 className="text-2xl font-bold mb-4 text-purple-400 flex items-center gap-2">
+            <Shield className="w-6 h-6 text-purple-400" /> Tổng quan về bảo mật
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {overviewFeatures.map((f, idx) => (
-              <div key={idx} className="flex items-center gap-3 bg-black/70 border border-yellow-500/30 rounded-xl p-4 shadow">
+              <div key={idx} className="flex items-center gap-3 bg-black/70 border border-purple-500/30 rounded-xl p-4 shadow">
                 {f.icon}
                 <span className="text-gray-200">{f.text}</span>
               </div>
@@ -73,15 +73,15 @@ export default function SecurityPage() {
 
         {/* Bảo mật tài khoản */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-400">Bảo mật tài khoản</h2>
+          <h2 className="text-2xl font-bold mb-4 text-purple-400">Bảo mật tài khoản</h2>
           <div className="space-y-3">
             {accountSteps.map((step, idx) => (
               <div key={idx} className="flex items-center gap-4">
-                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-black font-bold text-lg border-2 border-yellow-400 shadow">
+                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 text-black font-bold text-lg border-2 border-purple-400 shadow">
                   {idx + 1}
                 </div>
                 <div>
-                  <h3 className="font-semibold text-yellow-400 mb-1">{step.title}</h3>
+                  <h3 className="font-semibold text-purple-400 mb-1">{step.title}</h3>
                   <p className="text-gray-200">{step.description}</p>
                 </div>
               </div>
@@ -91,11 +91,11 @@ export default function SecurityPage() {
 
         {/* Bảo mật giao dịch */}
         <div className="mb-12">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-400">Bảo mật giao dịch</h2>
+          <h2 className="text-2xl font-bold mb-4 text-purple-400">Bảo mật giao dịch</h2>
           <div className="space-y-3">
             {transactionSteps.map((step, idx) => (
               <div key={idx} className="flex items-center gap-4">
-                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-black font-bold text-lg border-2 border-yellow-400 shadow">
+                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 text-black font-bold text-lg border-2 border-purple-400 shadow">
                   {idx + 1}
                 </div>
                 <span className="text-gray-200">{step}</span>
@@ -106,11 +106,11 @@ export default function SecurityPage() {
 
         {/* Quy trình xử lý sự cố */}
         <div className="mb-16">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-400">Quy trình xử lý sự cố</h2>
+          <h2 className="text-2xl font-bold mb-4 text-purple-400">Quy trình xử lý sự cố</h2>
           <div className="space-y-3">
             {incidentSteps.map((step, idx) => (
               <div key={idx} className="flex items-center gap-4">
-                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-yellow-400 to-yellow-600 text-black font-bold text-lg border-2 border-yellow-400 shadow">
+                <div className="w-9 h-9 flex items-center justify-center rounded-full bg-gradient-to-br from-purple-400 to-purple-600 text-black font-bold text-lg border-2 border-purple-400 shadow">
                   {idx + 1}
                 </div>
                 <span className="text-gray-200">{step}</span>

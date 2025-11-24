@@ -43,9 +43,9 @@ const config: Config = {
           foreground: "hsl(var(--card-foreground))",
         },
         hufa: {
-          DEFAULT: "#FFB800",
-          light: "#FFD466",
-          dark: "#CC9300",
+          DEFAULT: "#A855F7",
+          light: "#C4B5FD",
+          dark: "#6D28D9",
         },
       },
       fontFamily: {

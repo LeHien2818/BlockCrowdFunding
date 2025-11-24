@@ -166,11 +166,11 @@ const CreateProject = () => {
             <p className="text-sm text-muted-foreground">
               Lợi nhuận cố định bạn cam kết trả cho nhà đầu tư, không phụ thuộc vào doanh thu dự án
             </p>
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 space-y-2">
-              <p className="text-sm text-yellow-500 font-medium">
+            <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4 space-y-2">
+              <p className="text-sm text-purple-500 font-medium">
                 * Lưu ý quan trọng:
               </p>
-              <ul className="text-sm text-yellow-500/90 list-disc list-inside space-y-1">
+              <ul className="text-sm text-purple-500/90 list-disc list-inside space-y-1">
                 <li>Đây là cam kết của bạn về lợi nhuận cố định sẽ trả cho nhà đầu tư, bất kể dự án có lãi hay lỗ</li>
                 <li>Ngoài lợi nhuận cố định, bạn có thể đàm phán thêm với nhà đầu tư về phần lợi nhuận chia sẻ từ doanh thu dự án</li>
                 <li>Việc đàm phán lợi nhuận chia sẻ sẽ được thực hiện riêng và không ảnh hưởng đến cam kết lợi nhuận cố định</li>

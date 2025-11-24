@@ -77,18 +77,18 @@ const CodeBlock = ({ code }: { code: string }) => {
 
   return (
     <div className="relative my-2">
-      <pre className="bg-yellow-400/10 border border-yellow-500/30 text-yellow-200 p-4 rounded-xl overflow-x-auto font-mono text-sm">
+      <pre className="bg-purple-400/10 border border-purple-500/30 text-purple-200 p-4 rounded-xl overflow-x-auto font-mono text-sm">
         <code>{code}</code>
       </pre>
       <button
         onClick={copyToClipboard}
-        className="absolute top-2 right-2 p-2 rounded-lg bg-yellow-500/20 hover:bg-yellow-500/40 transition-colors"
+        className="absolute top-2 right-2 p-2 rounded-lg bg-purple-500/20 hover:bg-purple-500/40 transition-colors"
         aria-label="Copy code"
       >
         {copied ? (
           <Check className="w-4 h-4 text-green-500" />
         ) : (
-          <Copy className="w-4 h-4 text-yellow-400" />
+          <Copy className="w-4 h-4 text-purple-400" />
         )}
       </button>
     </div>
@@ -109,7 +109,7 @@ export default function ApiPage() {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Quay lại
         </Button>
-        <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           API Reference
         </h1>
         <p className="text-lg text-gray-300 mb-10">
@@ -117,13 +117,13 @@ export default function ApiPage() {
         </p>
 
         {/* Authentication */}
-        <div className="bg-black/70 border border-yellow-500/30 rounded-xl p-6 shadow-lg mb-10">
+        <div className="bg-black/70 border border-purple-500/30 rounded-xl p-6 shadow-lg mb-10">
           <div className="flex items-center gap-3 mb-2">
-            <KeyRound className="w-6 h-6 text-yellow-400" />
-            <h2 className="text-xl font-bold text-yellow-400">Authentication</h2>
+            <KeyRound className="w-6 h-6 text-purple-400" />
+            <h2 className="text-xl font-bold text-purple-400">Authentication</h2>
           </div>
           <p className="text-gray-200 mb-2">
-            Tất cả API calls cần có API key trong header <span className="font-mono bg-yellow-500/10 px-2 py-1 rounded text-yellow-400">Authorization</span>
+            Tất cả API calls cần có API key trong header <span className="font-mono bg-purple-500/10 px-2 py-1 rounded text-purple-400">Authorization</span>
           </p>
           <CodeBlock 
             code={`headers: {
@@ -135,7 +135,7 @@ export default function ApiPage() {
         {/* Endpoints */}
         <div className="space-y-8 mb-16">
           {apiEndpoints.map((endpoint, index) => (
-            <div key={index} className="bg-black/70 border border-yellow-500/30 rounded-xl p-6 shadow-lg">
+            <div key={index} className="bg-black/70 border border-purple-500/30 rounded-xl p-6 shadow-lg">
               <div className="flex items-center gap-4 mb-2">
                 <span className={`px-2 py-1 rounded text-sm font-bold tracking-wide ${
                   endpoint.method === 'GET' 
@@ -144,7 +144,7 @@ export default function ApiPage() {
                 }`}>
                   {endpoint.method}
                 </span>
-                <span className="font-mono text-yellow-400 text-base">{endpoint.endpoint}</span>
+                <span className="font-mono text-purple-400 text-base">{endpoint.endpoint}</span>
               </div>
               <p className="text-gray-200 mb-2">{endpoint.description}</p>
               <CodeBlock code={endpoint.example} />
@@ -154,18 +154,18 @@ export default function ApiPage() {
 
         {/* SDK */}
         <div className="pt-8">
-          <h2 className="text-2xl font-bold mb-4 text-yellow-400">SDK</h2>
+          <h2 className="text-2xl font-bold mb-4 text-purple-400">SDK</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold px-8 py-4 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300 border-2 border-yellow-400"
+              className="bg-gradient-to-r from-purple-400 to-purple-600 text-black font-bold px-8 py-4 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300 border-2 border-purple-400"
               onClick={() => router.push('/docs/sdk/javascript')}
             >
               JavaScript SDK
             </Button>
             <Button
               size="lg"
-              className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold px-8 py-4 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300 border-2 border-yellow-400"
+              className="bg-gradient-to-r from-purple-400 to-purple-600 text-black font-bold px-8 py-4 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300 border-2 border-purple-400"
               onClick={() => router.push('/docs/sdk/python')}
             >
               Python SDK

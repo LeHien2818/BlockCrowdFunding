@@ -81,7 +81,7 @@ export default function SmartContractsPage() {
           <ArrowLeft className="mr-2 h-4 w-4" />
           Quay lại
         </Button>
-        <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl md:text-5xl font-bold mb-2 bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
           Smart Contracts
         </h1>
         <p className="text-lg text-gray-300 mb-10">
@@ -91,10 +91,10 @@ export default function SmartContractsPage() {
         <div className="space-y-10 mb-16">
           {sections.map((section, idx) => (
             <div key={idx}>
-              <h2 className="text-2xl font-bold mb-3 text-yellow-400 flex items-center gap-2">
-                <Code className="w-6 h-6 text-yellow-400" /> {section.title}
+              <h2 className="text-2xl font-bold mb-3 text-purple-400 flex items-center gap-2">
+                <Code className="w-6 h-6 text-purple-400" /> {section.title}
               </h2>
-              <div className="bg-black/70 border border-yellow-500/30 rounded-xl p-6 shadow-lg overflow-x-auto">
+              <div className="bg-black/70 border border-purple-500/30 rounded-xl p-6 shadow-lg overflow-x-auto">
                 <pre className="text-gray-200 text-sm whitespace-pre-line font-mono">
                   {section.content.trim()}
                 </pre>
@@ -106,7 +106,7 @@ export default function SmartContractsPage() {
         <div className="text-center">
           <Button
             size="lg"
-            className="bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold px-10 py-4 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300 border-2 border-yellow-400"
+            className="bg-gradient-to-r from-purple-400 to-purple-600 text-black font-bold px-10 py-4 rounded-3xl shadow-lg hover:scale-105 transition-all duration-300 border-2 border-purple-400"
             onClick={() => router.push('/docs/api')}
           >
             Xem tài liệu API
