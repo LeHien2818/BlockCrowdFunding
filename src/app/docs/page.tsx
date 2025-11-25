@@ -88,7 +88,7 @@ export default function DocsPage() {
                 key={category}
                 variant={selectedCategory === category ? "default" : "outline"}
                 onClick={() => setSelectedCategory(category)}
-                className={selectedCategory === category ? "bg-hufa text-black" : ""}
+                className={selectedCategory === category ? "bg-green-500 text-black" : ""}
               >
                 {category}
               </Button>
@@ -105,19 +105,19 @@ export default function DocsPage() {
               className="bg-secondary/30 backdrop-blur-sm rounded-xl p-6 border border-border/30"
             >
               <div className="flex items-center gap-4 mb-4">
-                <div className="p-3 bg-hufa/90 rounded-lg">
+                <div className="p-3 bg-green-500/90 rounded-lg">
                   {doc.icon}
                 </div>
                 <div>
                   <h2 className="text-xl font-bold">{doc.title}</h2>
-                  <span className="text-sm text-hufa">{doc.category}</span>
+                  <span className="text-sm text-green-500">{doc.category}</span>
                 </div>
               </div>
               <p className="text-gray-400 mb-6">{doc.description}</p>
               <Button
                 variant="outline"
                 onClick={() => router.push(doc.link)}
-                className="w-full border-hufa text-hufa hover:bg-hufa/10"
+                className="w-full border-hufa text-green-500 hover:bg-green-500/10"
               >
                 Xem Tài Liệu
                 <ArrowRight className="ml-2 h-4 w-4" />

@@ -63,7 +63,7 @@ const ResourceCard = ({ title, description, icon: Icon, features, link }: any) =
       className="bg-secondary/30 backdrop-blur-sm rounded-xl p-6 space-y-4 border border-border/30"
     >
       <div className="flex items-center gap-4">
-        <div className="p-3 bg-hufa/90 rounded-lg">
+        <div className="p-3 bg-green-500/90 rounded-lg">
           <Icon className="w-6 h-6 text-black" />
         </div>
         <h3 className="text-xl font-semibold text-foreground">{title}</h3>
@@ -74,7 +74,7 @@ const ResourceCard = ({ title, description, icon: Icon, features, link }: any) =
       <ul className="space-y-2">
         {features.map((feature: any, index: any) => (
           <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-            <span className="w-1.5 h-1.5 bg-hufa/90 rounded-full" />
+            <span className="w-1.5 h-1.5 bg-green-500/90 rounded-full" />
             {feature}
           </li>
         ))}
@@ -82,7 +82,7 @@ const ResourceCard = ({ title, description, icon: Icon, features, link }: any) =
 
       <Link 
         href={link}
-        className="inline-flex items-center gap-2 text-hufa hover:text-hufa/80 transition-colors mt-4"
+        className="inline-flex items-center gap-2 text-green-500 hover:text-green-500/80 transition-colors mt-4"
       >
         <span>Tìm hiểu thêm</span>
         <FaArrowRight className="w-4 h-4" />
@@ -118,17 +118,17 @@ export default function ServicesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
-                className="bg-hufa text-black px-8 py-3 rounded-lg font-semibold hover:bg-hufa/90 transition-colors"
+                className="bg-green text-black px-8 py-3 rounded-lg font-semibold hover:bg-green-500/90 transition-colors"
                 onClick={() => router.push('/support')}
               >
                 Liên hệ hỗ trợ
               </Button>
               <Button 
                 variant="outline"
-                className="border-hufa text-hufa hover:bg-hufa/10 px-8 py-3 rounded-lg font-semibold transition-colors"
+                className="border-green-500 text-green-500 hover:bg-green-500/10 px-8 py-3 rounded-lg font-semibold transition-colors"
                 onClick={() => router.push('/faq')}
               >
-                Xem FAQ
+                text-green-500
               </Button>
             </div>
           </div>

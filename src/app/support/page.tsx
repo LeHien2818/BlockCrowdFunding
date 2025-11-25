@@ -19,21 +19,21 @@ export default function SupportPage() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="border border-gray-800 rounded-lg p-6 text-center">
-            <Phone className="w-12 h-12 mx-auto mb-4 text-hufa" />
+            <Phone className="w-12 h-12 mx-auto mb-4 text-green-500" />
             <h3 className="text-xl font-bold mb-2">Hỗ Trợ Qua Điện Thoại</h3>
             <p className="text-gray-400 mb-4">+84 123 456 789</p>
             <p className="text-sm text-gray-500">Thứ 2 - Thứ 6: 9:00 - 18:00</p>
           </div>
 
           <div className="border border-gray-800 rounded-lg p-6 text-center">
-            <Mail className="w-12 h-12 mx-auto mb-4 text-hufa" />
+            <Mail className="w-12 h-12 mx-auto mb-4 text-green-500" />
             <h3 className="text-xl font-bold mb-2">Hỗ Trợ Qua Email</h3>
             <p className="text-gray-400 mb-4">support@blockfund.com</p>
             <p className="text-sm text-gray-500">Phản hồi trong vòng 24h</p>
           </div>
 
           <div className="border border-gray-800 rounded-lg p-6 text-center">
-            <MessageSquare className="w-12 h-12 mx-auto mb-4 text-hufa" />
+            <MessageSquare className="w-12 h-12 mx-auto mb-4 text-green-500" />
             <h3 className="text-xl font-bold mb-2">Chat Trực Tuyến</h3>
             <p className="text-gray-400 mb-4">Hỗ trợ 24/7</p>
             <Button

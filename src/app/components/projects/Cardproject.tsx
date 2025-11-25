@@ -309,7 +309,7 @@ const CardProject = ({
               <Button
                 variant="default"
                 size="sm"
-                className="flex-1 bg-hufa/90 text-black hover:bg-hufa"
+                className="flex-1 bg-green-500/90 text-black hover:bg-green-500"
                 onClick={(e) => e.stopPropagation()}
               >
                 <Coins className="w-4 h-4 mr-2" />

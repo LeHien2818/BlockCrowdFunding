@@ -35,7 +35,7 @@ export default function ProjectsPage() {
         <h1 className="text-3xl text-green-400 font-bold text-foreground">Projects</h1>
         <button
           onClick={() => router.push('/create-project')}
-          className="flex items-center gap-2 px-4 py-2 bg-hufa/90 text-black rounded-lg hover:bg-hufa transition-colors font-medium"
+          className="flex items-center gap-2 px-4 py-2 bg-green-500/90 text-black rounded-lg hover:bg-green-500 transition-colors font-medium"
         >
           <Plus className="w-5 h-5" />
           <span>Create Project</span>
@@ -85,7 +85,7 @@ export default function ProjectsPage() {
 
       {/* Dự án của bạn */}
       <div className="mt-16">
-        <h2 className="text-2xl font-bold mb-6 text-hufa">My Projects</h2>
+        <h2 className="text-2xl font-bold mb-6 text-green-500">My Projects</h2>
         {userProjects.length === 0 ? (
           <div className="text-muted-foreground">You have not created any projects yet.</div>
         ) : (
