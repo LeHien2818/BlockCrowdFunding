@@ -94,7 +94,7 @@ const CreateProject = () => {
             value={formData.title}
             onChange={handleChange}
             required
-            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-hufa/50"
+            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50"
             placeholder="Nhập tên dự án"
           />
         </div>
@@ -110,7 +110,7 @@ const CreateProject = () => {
             onChange={handleChange}
             required
             rows={4}
-            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-hufa/50"
+            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50"
             placeholder="Mô tả chi tiết về dự án của bạn"
           />
         </div>
@@ -128,7 +128,7 @@ const CreateProject = () => {
             required
             min="0"
             step="0.01"
-            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-hufa/50"
+            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50"
             placeholder="Nhập số tiền cần huy động"
           />
           <p className="text-sm text-muted-foreground">Ví dụ: Nhập 1.5 cho 1.5 ETH</p>
@@ -146,7 +146,7 @@ const CreateProject = () => {
             onChange={handleChange}
             required
             min="1"
-            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-hufa/50"
+            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50"
             placeholder="Nhập số ngày cần huy động"
           />
         </div>
@@ -159,18 +159,18 @@ const CreateProject = () => {
             type="text"
             value={fixedProfitShare}
             onChange={(e) => setFixedProfitShare(e.target.value)}
-            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-hufa/50"
+            className="w-full px-4 py-2.5 bg-secondary/30 backdrop-blur-sm border border-border/30 rounded-lg text-foreground focus:outline-none focus:ring-2 focus:ring-green-500/50"
             placeholder="Ví dụ: 20% mỗi năm hoặc 0.5 ETH mỗi tháng"
           />
           <div className="space-y-2 mt-2">
             <p className="text-sm text-muted-foreground">
               Lợi nhuận cố định bạn cam kết trả cho nhà đầu tư, không phụ thuộc vào doanh thu dự án
             </p>
-            <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 space-y-2">
-              <p className="text-sm text-yellow-500 font-medium">
+            <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4 space-y-2">
+              <p className="text-sm text-green-500 font-medium">
                 * Lưu ý quan trọng:
               </p>
-              <ul className="text-sm text-yellow-500/90 list-disc list-inside space-y-1">
+              <ul className="text-sm text-green-500/90 list-disc list-inside space-y-1">
                 <li>Đây là cam kết của bạn về lợi nhuận cố định sẽ trả cho nhà đầu tư, bất kể dự án có lãi hay lỗ</li>
                 <li>Ngoài lợi nhuận cố định, bạn có thể đàm phán thêm với nhà đầu tư về phần lợi nhuận chia sẻ từ doanh thu dự án</li>
                 <li>Việc đàm phán lợi nhuận chia sẻ sẽ được thực hiện riêng và không ảnh hưởng đến cam kết lợi nhuận cố định</li>
@@ -198,7 +198,7 @@ const CreateProject = () => {
           className={`w-full py-3 px-4 rounded-lg font-medium transition-colors ${
             isLoading 
               ? 'bg-muted/30 text-muted-foreground cursor-not-allowed' 
-              : 'bg-hufa/90 text-black hover:bg-hufa'
+              : 'bg-green-500/90 text-white hover:bg-green-500'
           }`}
         >
           {isLoading ? 'Đang tạo...' : 'Tạo Dự Án'}

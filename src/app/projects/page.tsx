@@ -32,7 +32,7 @@ export default function ProjectsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex justify-between items-center mb-8">
-        <h1 className="text-3xl text-yellow-400 font-bold text-foreground">Projects</h1>
+        <h1 className="text-3xl text-green-400 font-bold text-foreground">Projects</h1>
         <button
           onClick={() => router.push('/create-project')}
           className="flex items-center gap-2 px-4 py-2 bg-hufa/90 text-black rounded-lg hover:bg-hufa transition-colors font-medium"

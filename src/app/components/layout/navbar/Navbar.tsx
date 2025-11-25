@@ -33,25 +33,25 @@ const Navbar = () => {
             {/* Desktop Navigation */}
             <div className="hidden lg:flex flex-row items-center justify-between text-muted-foreground">
               <div 
-                className="text-lg px-6 cursor-pointer hover:text-hufa transition-colors duration-200" 
+                className="text-lg px-6 cursor-pointer hover:text-green-500 transition-colors duration-200" 
                 onClick={() => router.push("/")}
               >
                 Home
               </div>
               <div 
-                className="text-lg px-6 cursor-pointer hover:text-hufa transition-colors duration-200" 
+                className="text-lg px-6 cursor-pointer hover:text-green-500 transition-colors duration-200" 
                 onClick={() => router.push("/projects")}
               >
                 Project
               </div>
               <div 
-                className="text-lg px-6 cursor-pointer hover:text-hufa transition-colors duration-200" 
+                className="text-lg px-6 cursor-pointer hover:text-green-500 transition-colors duration-200" 
                 onClick={() => router.push("/services")}
               >
                 Services
               </div>
               <div 
-                className="text-lg px-6 cursor-pointer hover:text-hufa transition-colors duration-200" 
+                className="text-lg px-6 cursor-pointer hover:text-green-500 transition-colors duration-200" 
                 onClick={() => router.push("/about")}
               >
                 About us

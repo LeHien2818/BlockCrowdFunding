@@ -67,7 +67,7 @@ const Statistics = () => {
           className="bg-secondary/30 backdrop-blur-sm rounded-xl p-6 space-y-3 border border-border/30"
         >
           <div className="flex items-center gap-3">
-            <div className="p-2 bg-hufa/90 rounded-lg">
+            <div className="p-2 bg-green-500/90 rounded-lg text-white">
               {item.icon}
             </div>
             <div>

@@ -35,7 +35,7 @@ export function HpHowItWorks() {
       <section id="how-it-works" className="py-20 bg-black text-white border-b-[1px] border-b-gray">
         <div className="max-w-6xl mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-4">How BlockFund works</h2>
-          <p className="text-lg text-yellow-400 mb-16">
+          <p className="text-lg text-green-400 mb-16">
             Our platform makes project funding and investment straightforward
           </p>
   
@@ -53,7 +53,7 @@ export function HpHowItWorks() {
                     <>
                       <div className="flex-1 text-center lg:text-left order-2 lg:order-1 lg:pr-12">
                         <div className="inline-block p-6 rounded-xl shadow border border-gray-700 max-w-md ml-auto mr-auto lg:mr-0">
-                          <h3 className="text-xl text-yellow-400 font-semibold mb-2">{step.title}</h3>
+                          <h3 className="text-xl text-green-400 font-semibold mb-2">{step.title}</h3>
                           <p className="text-white">{step.description}</p>
                         </div>
                       </div>
@@ -74,7 +74,7 @@ export function HpHowItWorks() {
                       </div>
                       <div className="flex-1 text-center lg:text-left order-2 lg:order-3 lg:pl-12">
                         <div className="inline-block p-6 rounded-xl shadow border border-gray-700 max-w-md ml-auto mr-auto lg:ml-0">
-                          <h3 className="text-xl text-yellow-400 font-semibold mb-2">{step.title}</h3>
+                          <h3 className="text-xl text-green-400 font-semibold mb-2">{step.title}</h3>
                           <p className="text-white">{step.description}</p>
                         </div>
                       </div>
@@ -88,7 +88,7 @@ export function HpHowItWorks() {
           <div className="mt-16 text-center">
             <button
               onClick={() => router.push("/projects")}
-            className="bg-white text-black hover:bg-amber-400 text-lg font-medium px-6 py-3 rounded-3xl bg-gradient-to-r border border-gray-600 shadow hover:scale-105 transition-transform cursor-pointer">
+            className="bg-white text-black hover:bg-green-400 text-lg font-medium px-6 py-3 rounded-3xl bg-gradient-to-r border border-gray-600 shadow hover:scale-105 transition-transform cursor-pointer">
               Get Started Today
             </button>
           </div>

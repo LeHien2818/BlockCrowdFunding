@@ -61,7 +61,7 @@ const TokenInfo = () => {
           href={`https://bscscan.com/token/${tokenAddress}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-hufa/90 text-black px-4 py-2.5 rounded-lg hover:bg-hufa transition-colors font-medium"
+          className="flex items-center justify-center gap-2 bg-green-500/90 text-white px-4 py-2.5 rounded-lg hover:bg-green-500 transition-colors font-medium"
         >
           <ExternalLink className="w-4 h-4" />
           <span>View on BscScan</span>
@@ -70,7 +70,7 @@ const TokenInfo = () => {
           href={pancakeSwapLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center gap-2 bg-hufa/90 text-black px-4 py-2.5 rounded-lg hover:bg-hufa transition-colors font-medium"
+          className="flex items-center justify-center gap-2 bg-green-500/90 text-white px-4 py-2.5 rounded-lg hover:bg-green-500 transition-colors font-medium"
         >
           <ExternalLink className="w-4 h-4" />
           <span>Buy on PancakeSwap</span>

@@ -455,7 +455,7 @@ const ProjectDetail = ({
                 </div>
                 <div className="h-3 w-full overflow-hidden rounded-full bg-gray-700">
                   <div
-                    className="h-full rounded-full bg-amber-400"
+                    className="h-full rounded-full bg-green-400"
                     style={{ width: `${percentage}%` }}
                   ></div>
                 </div>
@@ -467,7 +467,7 @@ const ProjectDetail = ({
                   <button
                     className={`border-b-2 px-4 py-2 font-medium ${
                       activeTab === "about"
-                        ? "border-amber-400 text-amber-400"
+                        ? "border-green-400 text-green-400"
                         : "border-transparent hover:text-gray-300"
                     }`}
                     onClick={() => setActiveTab("about")}
@@ -477,7 +477,7 @@ const ProjectDetail = ({
                   <button
                     className={`border-b-2 px-4 py-2 font-medium ${
                       activeTab === "backers"
-                        ? "border-amber-400 text-amber-400"
+                        ? "border-green-400 text-green-400"
                         : "border-transparent hover:text-gray-300"
                     }`}
                     onClick={() => setActiveTab("backers")}
@@ -487,7 +487,7 @@ const ProjectDetail = ({
                   <button
                     className={`border-b-2 px-4 py-2 font-medium ${
                       activeTab === "comments"
-                        ? "border-amber-400 text-amber-400"
+                        ? "border-green-400 text-green-400"
                         : "border-transparent hover:text-gray-300"
                     }`}
                     onClick={() => setActiveTab("comments")}
@@ -502,7 +502,7 @@ const ProjectDetail = ({
                 <div className="flex justify-end">
                   <Button
                     onClick={() => setShowRequestDialog(true)}
-                    className="bg-amber-500 hover:bg-amber-600 text-black"
+                    className="bg-green-500 hover:bg-green-600 text-black"
                   >
                     <Rocket className="w-4 h-4 mr-2" />
                     Yêu cầu huy động vốn nhanh
@@ -550,9 +550,8 @@ const ProjectDetail = ({
                         value={reason}
                         onChange={(e) => setReason(e.target.value)}
                         placeholder="Nhập lý do cần huy động vốn nhanh..."
-                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-amber-400 focus:outline-none"
-                        rows={4}
-                      />
+                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-green-400 focus:outline-none"
+                        rows={
                     </div>
                     
                     <div className="space-y-2">
@@ -561,10 +560,9 @@ const ProjectDetail = ({
                         type="file"
                         accept=".pdf,.jpg,.jpeg,.png"
                         onChange={handleIdentityVerificationChange}
-                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-amber-400 focus:outline-none"
+                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-green-400 focus:outline-none"
                       />
-                      <p className="text-sm text-gray-400">
-                        Tải lên CMND/CCCD/Hộ chiếu để xác thực danh tính
+                      <thực danh tính
                       </p>
                     </div>
 
@@ -573,7 +571,7 @@ const ProjectDetail = ({
                       <select
                         value={collateralType}
                         onChange={(e) => setCollateralType(e.target.value as 'document' | 'token' | 'nft')}
-                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-amber-400 focus:outline-none"
+                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-green-400 focus:outline-none"
                       >
                         <option value="document">Tài liệu</option>
                         <option value="token">Token</option>
@@ -588,11 +586,10 @@ const ProjectDetail = ({
                           type="file"
                           accept=".pdf,.jpg,.jpeg,.png"
                           onChange={handleCollateralChange}
-                          className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-amber-400 focus:outline-none"
+                          className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-green-400 focus:outline-none"
                         />
-                        <p className="text-sm text-gray-400">
-                          Tải lên giấy tờ chứng minh quyền sở hữu tài sản thế chấp
-                        </p>
+                        <p className="text-sm text-muted-foreground">
+                         
                       </div>
                     )}
 
@@ -648,7 +645,7 @@ const ProjectDetail = ({
                     <Button onClick={() => setShowRequestDialog(false)} variant="outline">
                       Hủy
                     </Button>
-                    <Button onClick={handleRequestFastFunding} className="bg-amber-500 hover:bg-amber-600 text-black">
+                    <Button onClick={handleRequestFastFunding} className="bg-green-500 hover:bg-green-600 text-black">
                       Gửi yêu cầu
                     </Button>
                   </DialogFooter>
@@ -671,7 +668,7 @@ const ProjectDetail = ({
                       <p>Số dư khả dụng: {campaign ? ethers.utils.formatEther(campaign.amountCollected) : "0"} ETH</p>
                       <p>Lãi phải trả: {profitInfo ? ethers.utils.formatEther(profitInfo.totalProfit) : "0"} ETH</p>
                       {!isCampaignEnded && (
-                        <p className="text-amber-400 mt-2">Dự án chưa kết thúc. Còn {remainingDays} ngày.</p>
+                        <p className="text-green-400 mt-2">Dự án chưa kết thúc. Còn {remainingDays} ngày.</p>
                       )}
                     </div>
                   </div>
@@ -706,7 +703,7 @@ const ProjectDetail = ({
                         placeholder="0.0"
                         step="0.01"
                         min="0"
-                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-amber-400 focus:outline-none"
+                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-green-400 focus:outline-none"
                       />
                     </div>
                     <div className="text-sm text-muted-foreground">
@@ -714,7 +711,7 @@ const ProjectDetail = ({
                       <p>Tổng lợi nhuận hiện tại: {profitInfo ? ethers.utils.formatEther(profitInfo.totalProfit) : "0"} ETH</p>
                       <p>Lần báo cáo gần nhất: {profitInfo ? new Date(Number(profitInfo.lastProfitReport) * 1000).toLocaleDateString() : "Chưa có"}</p>
                       <p>Lần báo cáo tiếp theo: {profitInfo ? new Date(Number(profitInfo.nextProfitReport) * 1000).toLocaleDateString() : "Chưa có"}</p>
-                      <p className="text-amber-400 mt-2">
+                      <p className="text-green-400 mt-2">
                         Thời gian chờ giữa các lần báo cáo: {profitInfo ? Math.floor(Number(profitInfo.profitDistributionPeriod) / (24 * 60 * 60)) : 0} ngày
                       </p>
                     </div>
@@ -760,16 +757,15 @@ const ProjectDetail = ({
                         value={newComment}
                         onChange={(e) => setNewComment(e.target.value)}
                         placeholder="Viết bình luận của bạn..."
-                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-amber-400 focus:outline-none"
+                        className="w-full rounded-lg border border-gray-700 bg-gray-800 p-4 text-white focus:border-green-400 focus:outline-none"
                         rows={4}
                       />
                       <button
                         onClick={handleAddComment}
                         disabled={isSubmitting}
-                        className="rounded-lg bg-amber-400 px-6 py-2 text-sm font-medium text-black hover:bg-amber-500 disabled:opacity-50"
+                        className="rounded-lg bg-green-500 px-6 py-2 text-sm font-medium text-white hover:bg-green-600 disabled:opacity-50"
                       >
-                        {isSubmitting ? "Đang gửi..." : "Gửi bình luận"}
-                      </button>
+                        {isSubmitting ? "Đang g
                     </div>
                     
                     <div className="space-y-4">
@@ -786,11 +782,10 @@ const ProjectDetail = ({
                             </div>
                             <div>
                               <p className="font-medium">{comment.user.name}</p>
-                              <p className="text-sm text-gray-400">{comment.date}</p>
+                              <p className="text-sm text-muted-foreground">{comment.date}</p>
                             </div>
                           </div>
-                          <p className="mt-3 text-gray-300">{comment.content}</p>
-                        </div>
+                          <p className="mt-3 text-gray-300">{comment.con
                       ))}
                     </div>
                   </div>
@@ -806,69 +801,61 @@ const ProjectDetail = ({
               
               <div className="mt-4 space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Mục tiêu</span>
+                  <span className="text-muted-foreground">Mục tiêu</span>
                   <span className="font-medium">{target} ETH</span>
                 </div>
                 
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Đã gọi được</span>
+                <div className="flex items-center justify-betweenr được</span>
                   <span className="font-medium">
                     {ethers.utils.formatEther(ethers.utils.parseEther(amountCollected.toString()))} ETH
                   </span>
                 </div>
-                
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Số người ủng hộ</span>
+                e 
+                  <span className="text-muted-foreground">Số người ủng hộ</span>
                   <span className="font-medium">{donators.length}</span>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-400">Thời gian còn lại</span>
-                  <span className="font-medium">{remainingDays} ngày</span>
-                </div>
+                  <span className="text-muted-foreground">Thời gian còn lại</span>
+                  <span className="font-medium">{remainingDays} 
 
                 {/* Thêm phần thông tin lợi nhuận */}
                 <div className="mt-4 border-t border-gray-700 pt-4">
                   <h3 className="mb-3 text-lg font-semibold">Thông tin lợi nhuận</h3>
                   
-                  <div className="space-y-3">
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Tổng lợi nhuận</span>
+                      <span className="text-muted-foreground">Tổng lợi nhuận</span>
                       <span className="font-medium text-green-400">
                         {profitInfo ? ethers.utils.formatEther(profitInfo.totalProfit) : '0'} ETH
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Lợi nhuận cố định</span>
-                      <span className="font-medium">
-                        {campaign?.fixedProfitShare || 'N/A'}
+                      <span className="text-muted-foreground">Lợi nhuận cố định</span>
+                      <span className="font-medium">a|
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Lần báo cáo gần nhất</span>
+                      <span className="text-muted-foreground">Lần báo cáo gần nhất</span>
                       <span className="font-medium">
                         {profitInfo && Number(profitInfo.lastProfitReport) > 0 
-                          ? new Date(Number(profitInfo.lastProfitReport) * 1000).toLocaleDateString() 
-                          : "Chưa có"}
+                          ? new Date(Number(
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Lần báo cáo tiếp theo</span>
-                      <span className="font-medium">
-                        {profitInfo && Number(profitInfo.nextProfitReport) > 0 
+                      <span className="text-muted-foreground">Lần báo cáo tiếp theo</span>
+                      <span className="font-medium">rIn
                           ? new Date(Number(profitInfo.nextProfitReport) * 1000).toLocaleDateString() 
                           : "Chưa có"}
                       </span>
                     </div>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-gray-400">Thời gian chờ giữa các lần báo cáo</span>
+                      <span className="text-muted-foreground">Thời gian chờ giữa các lần báo cáo</span>
                       <span className="font-medium">
-                        {profitInfo ? Math.floor(Number(profitInfo.profitDistributionPeriod) / (24 * 60 * 60)) : 0} ngày
-                      </span>
+                        {profitInfo ? Math.floor(Number(profitInfo.pa
                     </div>
                   </div>
                 </div>
@@ -877,24 +864,22 @@ const ProjectDetail = ({
                 {donatorProfit && Number(donatorProfit.donationAmount) > 0 && (
                   <div className="mt-4 border-t border-gray-700 pt-4">
                     <h3 className="mb-3 text-lg font-semibold">Lợi nhuận của bạn</h3>
-                    
-                    <div className="space-y-3">
+                    a
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-400">Số tiền đã đầu tư</span>
+                        <span className="text-muted-foreground">Số tiền đã đầu tư</span>
                         <span className="font-medium">
                           {ethers.utils.formatEther(donatorProfit.donationAmount)} ETH
                         </span>
                       </div>
 
                       <div className="flex items-center justify-between">
-                        <span className="text-gray-400">Lợi nhuận được nhận</span>
+                        <span className="text-muted-foreground">Lợi nhuận được nhận</span>
                         <span className="font-medium text-green-400">
                           {ethers.utils.formatEther(donatorProfit.profitShare)} ETH
                         </span>
                       </div>
 
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-400">Lần nhận gần nhất</span>
+                      <div className="flex items-center justify-betweenrất</span>
                         <span className="font-medium">
                           {Number(donatorProfit.lastClaim) === 0 
                             ? "Chưa nhận" 
@@ -902,15 +887,13 @@ const ProjectDetail = ({
                         </span>
                       </div>
 
-                      <div className="flex items-center justify-between">
-                        <span className="text-gray-400">Lần nhận tiếp theo</span>
+                      <div className="flex itemuted-foreground">Lần nhận tiếp theo</span>
                         <span className="font-medium">
                           {Number(donatorProfit.lastClaim) === 0 
                             ? "Chưa nhận" 
                             : new Date((Number(donatorProfit.lastClaim) + Number(profitInfo?.profitDistributionPeriod || 0)) * 1000).toLocaleDateString()}
                         </span>
                       </div>
-
                       {/* Thêm nút nhận lợi nhuận */}
                       <div className="mt-4">
                         <Button
@@ -920,8 +903,7 @@ const ProjectDetail = ({
                         >
                           {isClaiming ? "Đang xử lý..." : canClaim ? "Nhận lợi nhuận" : "Chưa có lợi nhuận để nhận"}
                         </Button>
-                        {!canClaim && Number(donatorProfit.profitShare) > 0 && (
-                          <p className="mt-2 text-sm text-amber-400">
+                        {!canClaim && Number(dext-sm text-green-400">
                             Bạn có thể nhận lợi nhuận vào ngày {new Date((Number(donatorProfit.lastClaim) + Number(profitInfo?.profitDistributionPeriod || 0)) * 1000).toLocaleDateString()}
                           </p>
                         )}
@@ -944,7 +926,7 @@ const ProjectDetail = ({
                     min="0.01"
                     value={contribution}
                     onChange={(e) => setContribution(e.target.value)}
-                    className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 text-white focus:border-amber-400 focus:outline-none"
+                    className="w-full rounded-lg border border-gray-700 bg-gray-900 p-3 text-white focus:border-green-400 focus:outline-none"
                     disabled={isCampaignEnded}
                   />
                 </div>
@@ -952,12 +934,12 @@ const ProjectDetail = ({
                 <button
                   onClick={handleContribute}
                   disabled={isSubmitting || isDonating || Number(remainingDays) <= 0 || isCampaignEnded}
-                  className="w-full rounded-lg bg-amber-400 px-6 py-3 text-sm font-medium text-black hover:bg-amber-500 disabled:opacity-50"
+                  className="w-full rounded-lg bg-green-500 px-6 py-3 text-sm font-medium text-white hover:bg-green-600 disabled:opacity-50"
                 >
                   {isSubmitting || isDonating ? "Đang xử lý..." : isCampaignEnded ? "Dự án đã kết thúc" : "Đóng góp ngay"}
                 </button>
                 {isCampaignEnded && (
-                  <p className="text-sm text-amber-400 mt-2">
+                  <p className="text-sm text-green-400 mt-2">
                     Dự án đã đạt mục tiêu hoặc hết hạn. Không thể đóng góp thêm.
                   </p>
                 )}
@@ -970,4 +952,3 @@ const ProjectDetail = ({
   )
 }
 
-export default ProjectDetail

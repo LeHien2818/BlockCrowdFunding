@@ -25,7 +25,7 @@ const WalletConnect = () => {
     return (
       <Dialog.Root>
         <Dialog.Trigger asChild>
-          <button className="bg-hufa text-black hover:bg-hufa-light px-4 py-2 rounded-md text-sm font-medium transition-colors">
+          <button className="bg-green-500 text-white hover:bg-green-400 px-4 py-2 rounded-md text-sm font-medium transition-colors">
             Connect Wallet
           </button>
         </Dialog.Trigger>
@@ -56,9 +56,9 @@ const WalletConnect = () => {
             <div className="mt-6 text-center text-muted-foreground text-sm">
               <p>By connecting your wallet, you agree to our</p>
               <div className="flex justify-center gap-2 mt-2">
-                <a href="#" className="text-hufa hover:text-hufa-light">Terms of Service</a>
+                <a href="#" className="text-green-500 hover:text-green-400">Terms of Service</a>
                 <span>and</span>
-                <a href="#" className="text-hufa hover:text-hufa-light">Privacy Policy</a>
+                <a href="#" className="text-green-500 hover:text-green-400">Privacy Policy</a>
               </div>
             </div>
 
@@ -95,7 +95,7 @@ const WalletConnect = () => {
             {address.slice(0, 6)}...{address.slice(-4)}
           </span>
         </div>
-        <div className="w-2 h-2 bg-hufa rounded-full"></div>
+        <div className="w-2 h-2 bg-green-500 rounded-full"></div>
       </button>
 
       {isOpen && (
