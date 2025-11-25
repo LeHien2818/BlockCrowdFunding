@@ -28,11 +28,11 @@ export function InvestorsSection({
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="bg-gray-800 rounded-lg p-4">
               <h3 className="text-lg font-semibold mb-2">Tổng số nhà đầu tư</h3>
-              <p className="text-2xl font-bold text-amber-400">{donators.length}</p>
+              <p className="text-2xl font-bold text-purple-400">{donators.length}</p>
             </div>
             <div className="bg-gray-800 rounded-lg p-4">
               <h3 className="text-lg font-semibold mb-2">Tổng số tiền đã đầu tư</h3>
-              <p className="text-2xl font-bold text-amber-400">
+              <p className="text-2xl font-bold text-purple-400">
                 {amountCollected} ETH
               </p>
             </div>
@@ -59,7 +59,7 @@ export function InvestorsSection({
                   <div key={index} className="flex items-center justify-between rounded-lg bg-gray-800 p-4 mb-3">
                     <div className="flex items-center space-x-3">
                       <div className="h-10 w-10 overflow-hidden rounded-full bg-gray-700 flex items-center justify-center">
-                        <span className="text-lg font-bold text-amber-400">
+                        <span className="text-lg font-bold text-purple-400">
                           {index + 1}
                         </span>
                       </div>
@@ -71,7 +71,7 @@ export function InvestorsSection({
                       </div>
                     </div>
                     <div className="text-right">
-                      <p className="font-medium text-amber-400">
+                      <p className="font-medium text-purple-400">
                         {ethers.utils.formatEther(donator.amount)} ETH
                       </p>
                       <p className="text-sm text-gray-400">

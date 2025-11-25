@@ -5,10 +5,12 @@ import { useEffect, useState } from "react"
 import CardProject from "@/app/components/projects/CardProject"
 import { ArrowRight } from "lucide-react"
 import Link from "next/link"
+import { useRouter } from "next/navigation"
 
 const FeaturedProjects = () => {
   const { campaigns, isLoadingCampaigns } = useCrowdfunding()
   const [featuredProjects, setFeaturedProjects] = useState<any[]>([])
+  const router = useRouter()
 
   useEffect(() => {
     if (campaigns && campaigns.length > 0) {
@@ -22,27 +24,27 @@ const FeaturedProjects = () => {
 
   if (isLoadingCampaigns) {
     return (
-      <div className="space-y-6 ">
-        <div className="flex items-center justify-between ">
-          <h2 className="text-2xl font-bold text-foreground">Featured Projects</h2>
+      <div className="space-y-8">
+        <div className="flex items-center justify-between">
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Top Campaigns</h2>
           <Link 
             href="/projects"
-            className="flex items-center gap-2 text-hufa hover:text-hufa/80 transition-colors"
+            className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
           >
             <span>View All</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[1, 2, 3].map((i) => (
             <div 
               key={i}
-              className="bg-secondary/30 backdrop-blur-sm rounded-xl p-6 space-y-4 border border-border/30 animate-pulse"
+              className="bg-gray-800/50 rounded-2xl p-6 space-y-4 border border-transparent animate-pulse"
             >
-              <div className="h-48 bg-muted/30 rounded-lg" />
-              <div className="space-y-2">
-                <div className="h-4 bg-muted/30 rounded w-3/4" />
-                <div className="h-4 bg-muted/30 rounded w-1/2" />
+              <div className="h-48 bg-gray-700/60 rounded-lg" />
+              <div className="space-y-3">
+                <div className="h-5 bg-gray-700/60 rounded w-3/4" />
+                <div className="h-4 bg-gray-700/60 rounded w-1/2" />
               </div>
             </div>
           ))}
@@ -52,33 +54,31 @@ const FeaturedProjects = () => {
   }
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       <div className="flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-foreground">Featured Projects</h2>
+        <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Top Campaigns</h2>
         <Link 
           href="/projects"
-          className="flex items-center gap-2 text-hufa hover:text-hufa/80 transition-colors"
+          className="flex items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
         >
           <span>View All</span>
           <ArrowRight className="w-4 h-4" />
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {featuredProjects.map((project) => (
           <CardProject
             key={project.id}
-            id={project.id}
-            image={project.image}
+            id={project.id.toString()}
+            owner={project.owner}
             title={project.title}
-            content={project.description}
-            target={project.target}
-            raised={project.amountCollected}
+            description={project.description}
+            target={project.target.toString()}
             deadline={project.deadline}
-            author={{
-              name: project.owner,
-              avatar: `/avatars/${project.owner.slice(2, 4)}.png`
-            }}
+            amountCollected={project.amountCollected.toString()}
+            image={project.image}
+            handleClick={() => router.push(`/projects/${project.id}`)}
           />
         ))}
       </div>
@@ -86,4 +86,4 @@ const FeaturedProjects = () => {
   )
 }
 
-export default FeaturedProjects 
+export default FeaturedProjects

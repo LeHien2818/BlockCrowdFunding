@@ -5,6 +5,8 @@ import { Providers } from "./providers";
 import Navbar from "./components/layout/navbar/Navbar";
 import Footer from "./components/layout/Footer";
 
+import Chat from "./components/chat/Chat";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -27,6 +29,7 @@ export default function RootLayout({
               {children}
             </main>
             <Footer />
+            <Chat />
           </div>
         </Providers>
       </body>

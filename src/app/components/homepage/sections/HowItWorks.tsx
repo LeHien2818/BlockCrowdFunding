@@ -1,100 +1,76 @@
-import {useRouter} from "next/navigation";
+import { useRouter } from "next/navigation";
+import { Briefcase, Wallet, Handshake, BarChart } from 'lucide-react';
 
 export function HpHowItWorks() {
-
     const router = useRouter();
 
     const steps = [
       {
-        title: "Create a Project",
+        icon: <Briefcase className="w-8 h-8 text-purple-400" />,
+        title: "1. Create a Project",
         description:
-          "Set up your project with comprehensive details, funding goals, and timeline. Add images, videos, and documentation to showcase your vision.",
-        position: "left",
+          "Launch your vision on our platform. Detail your project, set your funding goals, and tell your story with rich media.",
       },
       {
-        title: "Connect Your Wallet",
+        icon: <Wallet className="w-8 h-8 text-purple-400" />,
+        title: "2. Connect Wallet",
         description:
-          "Securely connect your cryptocurrency wallet to invest in projects or receive funding. We support MetaMask and other popular wallets.",
-        position: "right",
+          "Link your digital wallet in seconds. We support a variety of wallets for seamless and secure transactions.",
       },
       {
-        title: "Fund or Get Funded",
+        icon: <Handshake className="w-8 h-8 text-purple-400" />,
+        title: "3. Give & Get Funds",
         description:
-          "Browse projects to invest in or share your project to receive funding. All transactions are secured by smart contracts.",
-        position: "left",
+          "Explore a universe of innovative projects to back, or attract investors to bring your own ideas to life.",
       },
       {
-        title: "Track Progress",
+        icon: <BarChart className="w-8 h-8 text-purple-400" />,
+        title: "4. Track & Grow",
         description:
-          "Monitor your investments or funding progress through your personalized dashboard with detailed analytics.",
-        position: "right",
+          "Stay updated with real-time analytics. Monitor your investments or track your campaign's funding progress from your dashboard.",
       },
     ];
   
     return (
-      <section id="how-it-works" className="py-20 bg-black text-white border-b-[1px] border-b-gray">
-        <div className="max-w-6xl mx-auto px-4 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold mb-4">How BlockFund works</h2>
-          <p className="text-lg text-purple-400 mb-16">
-            Our platform makes project funding and investment straightforward
-          </p>
-  
-          <div className="relative">
-          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-white transform -translate-x-1/2 z-0 pointer-events-none" />
-
-  
-            <div className="flex flex-col gap-12 relative">
-              {steps.map((step, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col lg:flex-row items-center justify-center w-full relative"
-                >
-                  {step.position === "left" ? (
-                    <>
-                      <div className="flex-1 text-center lg:text-left order-2 lg:order-1 lg:pr-12">
-                        <div className="inline-block p-6 rounded-xl shadow border border-gray-700 max-w-md ml-auto mr-auto lg:mr-0">
-                          <h3 className="text-xl text-purple-400 font-semibold mb-2">{step.title}</h3>
-                          <p className="text-white">{step.description}</p>
-                        </div>
-                      </div>
-                      <div className="order-1 lg:order-2 mx-auto mb-4 lg:mb-0">
-                        <div className="w-12 h-12 rounded-full bg-black text-white font-bold shadow-lg border-4 border-white flex items-center justify-center">
-                          {index + 1}
-                        </div>
-                      </div>
-                      <div className="flex-1 order-3 lg:pl-12" />
-                    </>
-                  ) : (
-                    <>
-                      <div className="flex-1 order-3 lg:order-1 lg:pr-12" />
-                      <div className="order-1 lg:order-2 mx-auto mb-4 lg:mb-0">
-                        <div className="w-12 h-12 rounded-full bg-black text-white font-bold shadow-lg border-4 border-white flex items-center justify-center">
-                          {index + 1}
-                        </div>
-                      </div>
-                      <div className="flex-1 text-center lg:text-left order-2 lg:order-3 lg:pl-12">
-                        <div className="inline-block p-6 rounded-xl shadow border border-gray-700 max-w-md ml-auto mr-auto lg:ml-0">
-                          <h3 className="text-xl text-purple-400 font-semibold mb-2">{step.title}</h3>
-                          <p className="text-white">{step.description}</p>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                </div>
-              ))}
+      <section id="how-it-works" className="py-24 sm:py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            <div className="max-w-2xl mx-auto lg:text-center">
+                <h2 className="text-base font-semibold leading-7 text-purple-400">How It Works</h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                    A Simple Path to Funding and Investment
+                </p>
+                <p className="mt-6 text-lg leading-8 text-gray-400">
+                    Follow these four simple steps to get started on our decentralized crowdfunding platform.
+                </p>
             </div>
-          </div>
-  
-          <div className="mt-16 text-center">
-            <button
-              onClick={() => router.push("/projects")}
-            className="bg-white text-black hover:bg-amber-400 text-lg font-medium px-6 py-3 rounded-3xl bg-gradient-to-r border border-gray-600 shadow hover:scale-105 transition-transform cursor-pointer">
-              Get Started Today
-            </button>
-          </div>
+
+            <div className="relative mt-16 sm:mt-20 lg:mt-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {steps.map((step) => (
+                        <div key={step.title} className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl hover:shadow-purple-500/10">
+                            <div className="flex justify-center mb-6">
+                                <div className="flex h-16 w-16 items-center justify-center rounded-full bg-purple-500/10 border-2 border-purple-500/20">
+                                    {step.icon}
+                                </div>
+                            </div>
+                            <h3 className="text-lg font-bold text-white mb-3">{step.title}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed">{step.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+
+            <div className="mt-20 text-center">
+              <button 
+                onClick={() => router.push("/create-project")} 
+                className="text-lg font-semibold px-8 py-4 rounded-full text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 shadow-lg"
+              >
+                Start a Campaign
+              </button>
+            </div>
         </div>
       </section>
     );
   }
   
-  export default HpHowItWorks;
+export default HpHowItWorks;

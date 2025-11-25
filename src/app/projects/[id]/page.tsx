@@ -15,7 +15,7 @@ const ProjectPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       if (!isLoadingCampaigns && campaigns) {
-        const campaign = campaigns.find(c => c.id === params.id)
+        const campaign = campaigns.find(c => c.id === params?.id)
         if (campaign) {
           setProject(campaign)
           
@@ -34,7 +34,7 @@ const ProjectPage = () => {
     }
 
     fetchData()
-  }, [campaigns, isLoadingCampaigns, params.id, getDonators])
+  }, [campaigns, isLoadingCampaigns, params?.id, getDonators])
 
   if (isLoadingCampaigns || !project) {
     return <div>Loading...</div>
